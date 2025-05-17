@@ -7,7 +7,7 @@ function App() {
         <Nav /> 
       </div>
 
-      <div className="heroSection flex  mx-auto flex-col justify-center  items-center   w-[50%] h-[calc(50vh-50px)] ">
+      <div className="heroSection mx-auto w-[50%] h-[calc(50vh-50px)] ">
         <HeroSection />
       </div>
 

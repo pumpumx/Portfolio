@@ -7,6 +7,16 @@
     background-color: aqua;
 }
 
+body {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    overflow: auto;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
 .antialiased-border {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
@@ -23,4 +33,17 @@
     font-family: "Poetsen One", sans-serif;
     font-weight: 400;
     font-style: normal;
-  }
+}
+
+.share-tech-regular {
+    font-family: "Share Tech", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.oswald-best {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
