@@ -1,19 +1,17 @@
+import BgJet from "./components/backgroundJet/BgJet.tsx"
 import {Nav , HeroSection} from "./index.ts"
-
 function App() {
-  return (
-    <div className="main relative w-full h-[200vh] bg-black">
-      <div className="navBar h-24 sticky font- top-0 ">
-        <Nav /> 
-      </div>
+ 
 
-      <div className="heroSection mx-auto w-[50%] h-[calc(50vh-50px)] ">
-        <HeroSection />
+return (
+      <div className="main relative w-full min-h-screen">
+      <BgJet/>
+      <div className="heroSection mx-auto w-[50%] h-[calc(50vh)] ">
+        <HeroSection/>
       </div>
-
-      
     </div>
+    
   )
 }
 
-export default App
+export default App  

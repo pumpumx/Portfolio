@@ -1,4 +1,5 @@
 import gsap from "gsap";
+import type { RefObject } from "react";
 
 export function createRotationTimeline(ref: React.RefObject<HTMLDivElement | null>) {
   
@@ -10,4 +11,18 @@ export function createRotationTimeline(ref: React.RefObject<HTMLDivElement | nul
     paused:true
   });
 
+}
+
+export function navStartAnimation(ref: RefObject<HTMLDivElement | null>){
+
+  return gsap.fromTo(ref.current,{
+    yPercent:-300,
+  },{
+    yPercent:0,
+    duration:2,
+    ease:'power2',
+    stagger:{
+      amount:0.5
+    }
+  })
 }
