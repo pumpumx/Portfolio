@@ -10,7 +10,7 @@
 body {
     scrollbar-width: none;
     -ms-overflow-style: none;
-    overflow: auto;
+    overflow: none;
 }
 
 body::-webkit-scrollbar {
@@ -46,4 +46,11 @@ body::-webkit-scrollbar {
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
+}
+li{
+    list-style-type: '✠';
+
+}
+li::marker{
+    color: hotpink;
 }
