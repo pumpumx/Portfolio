@@ -5,7 +5,7 @@ export interface buttonProp{
 }
 const  Badge = ({imgLink , text="React"}:buttonProp)=>{
     return(
-        <button className="w-[30%] h-[20%] relative outline-1 overflow-hidden flex  border-white border-2 justify-around items-center  rounded-full">
+        <button className="w-[30%] h-[10%] relative outline-1 overflow-hidden flex  border-white border-2 justify-around items-center  rounded-full">
             <div className="image w-[1rem] rounded-full ">
                 <img src={imgLink} alt="" className="object-cover w-full h-full" />
             </div>

@@ -12,7 +12,7 @@ interface point {
   export const WorkDesc = ({ title = "This is my title", desc = "This is the desc of the task which i am trying to obtian yes yes this is what i want", points }: workDesc) => {
     return (
       <>
-      <div className="w-full subpixel-antialiased antialised h-[20vh] bg-black  flex p-3 flex-col justify-center items-center ">
+      <div className="w-full s hidden subpixel-antialiased antialised h-[20vh] bg-black  sm:flex p-3 flex-col justify-center items-center ">
         <div className="w-full h-[30%]  flex flex-col">
           <span className="w-[90%] top-5 absolute h-[40%] flex mb-1">
             <p className="text-white font-bold text-2xl ">{title}</p>

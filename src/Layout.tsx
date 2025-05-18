@@ -6,10 +6,10 @@ const Layout = () => {
   return (
     <div className="min-h-screen flex flex-col">
       {/* Fixed Nav */}
-      <header className="sticky h-24 top-0 z-50">
+      <header className="sticky bg-transparent  top-0 z-10">
         <Nav />
       </header>
-      <main className="flex-grow">
+      <main className="flex-grow  top-0">
         <Outlet />
       </main>
 

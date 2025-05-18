@@ -7,7 +7,7 @@ return (
       <div className="main relative w-full min-h-screen">
       <BgJet/>
       
-      <div className="heroSection mx-auto w-[50%] h-[calc(50vh)] ">
+      <div className="heroSection mx-auto mt-40 w-[50%] h-[calc(50vh)] ">
         <HeroSection/>
       </div>
     </div>
