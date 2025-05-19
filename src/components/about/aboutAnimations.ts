@@ -15,7 +15,6 @@ const sliderAnimation = (sliderRef:RefObject<HTMLDivElement | null>)=>{
 
     const moveY = parentHeight - sliderHeight
 
-    let colorTween: GSAPTween | null = null;
 
     gsap.fromTo(sliderRef.current,{
         y:0

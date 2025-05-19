@@ -2,16 +2,18 @@ import { useEffect, useRef } from "react"
 import { WorkDesc } from "../work/workDesc"
 import ImageGallery from "./ImageGallery"
 import sliderAnimation from "./aboutAnimations"
+import Demo from "./HeatMap"
 
 function About() {
     const sliderRef = useRef<HTMLDivElement>(null)
-    useEffect(()=>{
+    useEffect(() => {
         sliderAnimation(sliderRef)
-    },[])
+    }, [])
     return (
         <div className="w-full min-h-screen bg-black/90 relative overflow-x-hidden">
-            <div className="w-full h-[100vh] flex flex-col justify-center items-center gap-5 bg-pink-300">
-                <div className="w-full h-[50%] bg-blue-400 text-white flex flex-col items-center">
+            <div className="w-full xl:w-[50%] mx-auto h-full ">
+            <div className="w-full h-[100vh] flex flex-col justify-center items-center gap-5 ">
+                <div className="w-full h-[50%]  text-white flex flex-col items-center">
                     <span className="mt-5">More About me</span>
                     <span className="h-[25%]">
                         <h2 className="text-3xl mt-5 lg:text-6xl font-semibold">
@@ -22,7 +24,7 @@ function About() {
                             </span>
                         </h2>
                     </span>
-                    <span className="text-center mt-5  text-white/50 font-medium cal-sans-regular w-full flex flex-col items-center h-[75%] bg-red-600">
+                    <span className="text-center mt-5  text-white/50 font-medium cal-sans-regular w-full flex flex-col items-center h-[75%]">
                         <span>
                             I'm Naaz Manhas, a proactive full-stack developer passionate about creating dynamic web experiences. From frontend to backend, I thrive on solving complex
                             problems with clean, efficient code. My expertise spans React, Next.js, and Node.js, and I'm always eager to learn more. <br />
@@ -38,7 +40,7 @@ function About() {
                     </span>
 
                 </div>
-                <div className="imageGallery w-full mt-10  h-[30%] bg-red-500">
+                <div className="imageGallery w-full mt-10  h-[30%]">
                     <ImageGallery />
                 </div>
             </div>
@@ -51,16 +53,16 @@ function About() {
                         Experience That Brings Ideas to Life
                     </span>
                 </div>
-                <div className="w-full h-[80%] bg-amber-400 p-1">
-                    <div className="w-full h-full bg-red-500 flex flex-row relative justify-around ">
-                        <div className="slider w-[20%] h-[90%] self-center  flex  justify-center bg-green-500">
+                <div className="w-full h-[80%]  p-1">
+                    <div className="w-full h-full  flex flex-row relative justify-around ">
+                        <div className="slider w-[20%] h-[90%] self-center  flex  justify-center ">
                             <div className="w-[30%] h-[95%] bg-white/45 relative self-center rounded-md">
                                 <div className="w-full h-[2%] rounded-full absolute bg-gradient-to-l from-blue-600 to-purple-700" ref={sliderRef}>
 
                                 </div>
                             </div>
                         </div>
-                        <div className="aboutDesc w-[70%] h-[90%] self-center bg-amber-300">
+                        <div className="aboutDesc w-[70%] h-[90%] self-center">
                             <div className="w-full h-[30%]">
                                 <WorkDesc title="InfoTech | Frontend Engineer" desc="Developed CMS-driven, reusable pagebuilder blocks with dynamic configurability via Sanity and Contentful, empowering non-developers to manage content independently. Authored custom schemas and optimized GROQ queries for scalable content delivery across 6+ enterprise-level websites.
                                                         Built high-performance, pixel-perfect UIs using Next.js and Tailwind CSS, leveraging Static Site Generation (SSG), Server-Side Rendering (SSR), and SEO optimization, resulting in a 23% increase in user engagement and a 14% improvement in page load times.
@@ -72,7 +74,18 @@ function About() {
                     </div>
                 </div>
             </div>
-
+            <div className="w-full h-[40vh] ">
+                <div className="w-full h-[30%] flex justify-center items-center text-white font-bold text-3xl sm:text-5xl">
+                <span className="flex text-center ">
+                         GitHub Contributions
+                </span>
+                </div>
+                <div className="githubHeatMap flex w-full h-[70%] items-center justify-center">
+                    <Demo/>
+                </div>
+               
+            </div>
+            </div>
         </div>
     )
 }
