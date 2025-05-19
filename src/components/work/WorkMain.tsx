@@ -11,7 +11,7 @@ const WorkMain = () => {
         <>
             <div className="w-full min-h-screen bg-black/90 overflow-x-hidden">
                 {/* Top Spacer */}
-                <div className="bg-black w-full h-[10vh]" />
+                <div className="bg-black w-full h-[10vh] shadow-[0px_0px_30px_5px_black] z-10"  />
                 {/* Title Section */}
                 <div className="w-full lg:w-full min-h-[30vh] flex flex-col justify-center items-center bg-[url(/workBg.jpg)] bg-cover bg-center text-white text-center">
                     <span className="text-xs lg:text-2xl">Featured Case Studies</span>

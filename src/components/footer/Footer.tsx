@@ -1,5 +1,8 @@
 import { ConnectButton } from "../heroSection/HeroSection"
 import { FooterData, FooterExtraData } from "../../constants/constants.ts"
+import { MouseParallax } from "react-just-parallax"
+import { useEffect, useRef } from "react"
+import onScrollText from "./footerAnimation.ts"
 // import { useNavigate } from "react-router-dom"
 function Footer() {
 
@@ -8,25 +11,33 @@ function Footer() {
     // const navigateHandler = (href:string)=>{
     //     navigate(${href})
     // }
+    const buttonRef = useRef<HTMLDivElement>(null)
+    const textRef = useRef<HTMLDivElement>(null)
+
+    useEffect(()=>{
+        onScrollText(textRef);
+    },[])
 
     return (
-        <div className="w-full h-[100vh] bg-black z-10 ">
+        <div className="w-full h-[100vh] bg-black z-10 overflow-x-hidden">
             <div className="w-full flex flex-col justify-center items-center h-[70vh] bg-cover bg-[url(/FooterBg.jpg)]">
                 <div className="Logo w-[50%] flex items-center justify-center">
                     <img src="" alt=""  className="w-full lg:w-[15rem]"/>
                 </div>
-                <div className="CenterText lg:text-5xl">
-                    <p className="text-white fontbold text-center poetsen-one-regular">
+                <div className="CenterText lg:text-5xl" >
+                    <p className="text-white fontbold text-center poetsen-one-regular" ref={textRef}>
                         FROM CONCEPT TO CREATION <br />
                         LET's MAKE IT HAPPEN!
                     </p>
                 </div>
 
-                <div className="connectButton  ">
+                <div className="connectButton mt-10" ref={buttonRef}>
+                    <MouseParallax parallaxContainerRef={buttonRef} shouldResetPosition={true}>
                     <ConnectButton />
+                    </MouseParallax>
                 </div>
 
-                <div className="OtherText">
+                <div className="OtherText mt-10">
                     <p className="font-bold text-xs text-white text-center lg:text-3xl">I'm available for full-time roles & freelance projects.</p>
                     <span>
                         <p className="text-xs text-white text-center lg:text-2xl">I thrive on crafting dynamic web applications, and <br />

@@ -4,10 +4,12 @@ import App from './App.tsx'
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom'
 import Layout from './Layout.tsx'
 import WorkMain from './components/work/WorkMain.tsx'
+import ErrorBoundary from './errorBoundary/ErrorBoundary.tsx'
+import RouteError from './errorBoundary/NotFound.tsx'
 const routes = createBrowserRouter(
   createRoutesFromElements(
     <>
-      <Route element={<Layout />} >
+      <Route element={<Layout />}errorElement={<RouteError/>}  >
         <Route path='/home' element={<App />} />
         <Route path='/work' element={<WorkMain />} />
         </Route >
@@ -15,9 +17,10 @@ const routes = createBrowserRouter(
       </>
     )  
   )
-      
 
       createRoot(document.getElementById('root')!).render(
+        <ErrorBoundary>
         <RouterProvider router={routes}>
         </RouterProvider>
-      )
+        </ErrorBoundary>
+    )

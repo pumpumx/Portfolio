@@ -10,16 +10,16 @@ const startAnimation = (ref: RefObject<HTMLDivElement | null>) => {
     document.fonts.ready.then(() => {
         gsap.registerPlugin(SplitText)
 
-        const split = new SplitText(ref.current, { type: 'chars' })
+        const split = new SplitText(ref.current, { type: 'words' })
 
-        return gsap.from(split.chars, {
+         gsap.from(split.words, {
             yPercent: "random([-100,100])",
             rotate: "random([-30,30])",
             autoAlpha:0,
             yoyo:false,
             duration:1,
             stagger:{
-                amount:0.5,
+                amount:0.1  ,
                 from:"random"
             }
         }, 
