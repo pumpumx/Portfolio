@@ -8,7 +8,7 @@ const routes = createBrowserRouter(
   createRoutesFromElements(
     <>
       <Route element={<Layout />} >
-        <Route path='/' element={<App />} />
+        <Route path='/home' element={<App />} />
         <Route path='/work' element={<WorkMain />} />
         </Route >
 

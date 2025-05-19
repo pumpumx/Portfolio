@@ -1,43 +1,41 @@
 interface point {
-    content: string
-  }
-  interface workDesc {
-    title: string,
-    desc: string,
-    points: point[],
-  }
-  
-  import { firstProject, techStack } from "./work.constants.ts"
-  import Badge from "./Badge.tsx"
-  export const WorkDesc = ({ title = "This is my title", desc = "This is the desc of the task which i am trying to obtian yes yes this is what i want", points }: workDesc) => {
-    return (
-      <>
-      <div className="w-full s hidden subpixel-antialiased antialised h-[20vh] bg-black  sm:flex p-3 flex-col justify-center items-center ">
-        <div className="w-full h-[30%]  flex flex-col">
-          <span className="w-[90%] top-5 absolute h-[40%] flex mb-1">
-            <p className="text-white font-bold text-2xl ">{title}</p>
-          </span>
-          <span className="w-full h-[60%]  flex">
-            <p className=" text-white/80 font-semibold text-sm">
-              {desc}
-            </p>
-          </span>
-        </div>
-        <div className="w-full h-[40%] hidden flex-col gap-2  ">
-          {firstProject.map(({ id, text }) => (
-            <li key={id} className="text-white list-style w-full text-sm">
-              {text}
-            </li>
-          ))}
-        </div>
-  
+  content: string
+}
+interface workDesc {
+  title: string,
+  desc: string,
+  points?: point[],
+}
+
+import { firstProject, techStack } from "./work.constants.ts"
+import Badge from "./Badge.tsx"
+
+export const WorkDesc = ({
+  title = "This is my title",
+  desc = "This is the desc of the task which I am trying to obtain — yes yes, this is what I want.",
+  points,
+}: workDesc) => {
+  return (
+    <div className="w-full bg-transparent text-white p-4 rounded-md flex flex-col gap-4">
+      {/* Title and Description */}
+      <div>
+        <h3 className="text-2xl font-bold">{title}</h3>
+        <p className="text-sm text-white/80 mt-2">{desc}</p>
       </div>
-      <div className="w-full p-1 h-[20vh] bg-black left-0 flex flex-wrap gap-1  ">
-          {techStack.map(({ id, imgLink, text }) => (
-            <Badge key={id} id={id} text={text} imgLink={imgLink} />
-          ))}
-        </div>
-      </>
-    )
-  }
-  
+
+      {/* Points List */}
+      <ul className="list-disc list-inside space-y-1 hidden md:block">
+        {firstProject.map(({ id, text }) => (
+          <li key={id} className="text-sm">{text}</li>
+        ))}
+      </ul>
+
+      {/* Tech Stack Badges */}
+      <div className="flex flex-wrap gap-2 h-[2rem] sm:h-[2rem] md:h-[4rem]">
+        {techStack.map(({ id, imgLink, text }) => (
+          <Badge key={id} id={id} text={text} imgLink={imgLink} />
+        ))}
+      </div>
+    </div>
+  )
+}

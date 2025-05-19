@@ -6,30 +6,30 @@ function Footer() {
     // const navigate = useNavigate()
 
     // const navigateHandler = (href:string)=>{
-    //     navigate(`${href}`)
+    //     navigate(${href})
     // }
 
     return (
-        <div className="w-full h-[100vh] bg-black ">
-            <div className="w-full flex flex-col justify-center items-center h-[70vh] bg-contain bg-[url(/FooterBg.jpg)]">
+        <div className="w-full h-[100vh] bg-black z-10 ">
+            <div className="w-full flex flex-col justify-center items-center h-[70vh] bg-cover bg-[url(/FooterBg.jpg)]">
                 <div className="Logo w-[50%] flex items-center justify-center">
                     <img src="" alt=""  className="w-full lg:w-[15rem]"/>
                 </div>
-                <div className="CenterText ">
+                <div className="CenterText lg:text-5xl">
                     <p className="text-white fontbold text-center poetsen-one-regular">
                         FROM CONCEPT TO CREATION <br />
                         LET's MAKE IT HAPPEN!
                     </p>
                 </div>
 
-                <div className="connectButton ">
+                <div className="connectButton  ">
                     <ConnectButton />
                 </div>
 
                 <div className="OtherText">
-                    <p className="font-bold text-xs text-white text-center">I'm available for full-time roles & freelance projects.</p>
+                    <p className="font-bold text-xs text-white text-center lg:text-3xl">I'm available for full-time roles & freelance projects.</p>
                     <span>
-                        <p className="text-xs text-white text-center">I thrive on crafting dynamic web applications, and <br />
+                        <p className="text-xs text-white text-center lg:text-2xl">I thrive on crafting dynamic web applications, and <br />
                             delivering seamless user experiences.</p>
                     </span>
                 </div>
@@ -71,4 +71,4 @@ function Footer() {
     )
 }
 
-export default Footer
+export default Footer 
