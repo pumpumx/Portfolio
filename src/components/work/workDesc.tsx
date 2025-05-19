@@ -1,10 +1,19 @@
 interface point {
   content: string
 }
+interface buttonStack{
+  id:number,
+  name:string,
+  imgLink:string,
+  
+}
 interface workDesc {
   title: string,
   desc: string,
   points?: point[],
+  buttonList?:buttonStack
+
+  
 }
 
 import { firstProject, techStack } from "./work.constants.ts"
@@ -13,14 +22,14 @@ import Badge from "./Badge.tsx"
 export const WorkDesc = ({
   title = "This is my title",
   desc = "This is the desc of the task which I am trying to obtain — yes yes, this is what I want.",
-  points,
+  points,buttonList
 }: workDesc) => {
   return (
     <div className="w-full bg-transparent text-white p-4 rounded-md flex flex-col gap-4">
       {/* Title and Description */}
       <div>
         <h3 className="text-2xl font-bold">{title}</h3>
-        <p className="text-sm text-white/80 mt-2">{desc}</p>
+        <p className="text-sm text-center text-white/80 mt-2">{desc}</p>
       </div>
 
       {/* Points List */}
