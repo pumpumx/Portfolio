@@ -2,7 +2,7 @@ import gsap from "gsap";
 import type { RefObject } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-const sliderAnimation = (sliderRef:RefObject<HTMLDivElement | null>)=>{
+const sliderAnimation = (sliderRef:RefObject<HTMLDivElement | null>, parentRef:RefObject<HTMLDivElement | null>)=>{
     if(!sliderRef.current) return;
 
     gsap.registerPlugin(ScrollTrigger)
@@ -10,7 +10,9 @@ const sliderAnimation = (sliderRef:RefObject<HTMLDivElement | null>)=>{
     const parent = sliderRef.current.parentElement
     if(!parent) return
 
-    const parentHeight = parent.offsetHeight
+    if(!parentRef.current) return;
+    
+    const parentHeight = parentRef.current.offsetHeight
     const sliderHeight = sliderRef.current.offsetHeight
 
     const moveY = parentHeight - sliderHeight

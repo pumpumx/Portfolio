@@ -35,6 +35,18 @@
     }
   }
 
+  @layer components {
+    .custom-heatmap text{
+      fill:white;
+    }
+  }
+
+  .custom-heatmap .w-heatmap-week text {
+    fill: white !important;
+  }
+  .custom-heatmap .w-heatmap-month text {
+    fill: white !important;
+  }
 .bg-123 {
     background-color: aqua;
 }
@@ -76,6 +88,10 @@ body::-webkit-scrollbar {
   overflow: hidden;
 }
 
+.custom-heatmap text {
+  fill: white ;
+  font-size: 12px;
+}
 
 .poetsen-one-regular {
     font-family: "Poetsen One", sans-serif;

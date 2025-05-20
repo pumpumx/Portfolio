@@ -42,6 +42,7 @@ const Demo = () => {
           rx: 4,
           ry: 4,
         }}
+        className='custom-heatmap'
         style={{
           width: '100%',
           maxWidth: '60%',

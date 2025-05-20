@@ -25,11 +25,11 @@ export const WorkDesc = ({
   points,buttonList
 }: workDesc) => {
   return (
-    <div className="w-full bg-transparent text-white p-4 rounded-md flex flex-col gap-4">
+    <div className="w-full bg-transparent  text-white p-4 rounded-md flex flex-col gap-4">
       {/* Title and Description */}
-      <div>
-        <h3 className="text-2xl font-bold">{title}</h3>
-        <p className="text-sm text-center text-white/80 mt-2">{desc}</p>
+      <div className="">
+        <h3 className="text-4xl font-bold lg:text-4xl poetsen-one-regular pb-5">{title}</h3>
+        <p className="text-sm text-center text-white/70 mt-2  ">{desc}</p>
       </div>
 
       {/* Points List */}

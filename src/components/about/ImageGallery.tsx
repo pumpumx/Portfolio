@@ -14,7 +14,7 @@ const ImageGallery = () => {
 
   },[])
   return (
-    <div className="gallery-container w-full h-full flex items-center justify-center py-10">
+    <div className="gallery-container w-full h-full sm:self-center flex items-center justify-center py-10">
       <Swiper 
         effect={'cube'}
         grabCursor={true}

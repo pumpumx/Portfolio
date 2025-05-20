@@ -9,8 +9,7 @@ function BgJet() {
             <div className="w-full h-[100vh]  fixed top-0 z-[-1] ">
                 <Canvas className="w-full h-[100vh]  " gl={{antialias:true}}>
                     <PerspectiveCamera makeDefault position={[85, 200, 40]} />
-
-                        <SpaceJet
+                        <SpaceJet 
                             scale={0.17}
                             position={[10, 20, -20]}
                         />

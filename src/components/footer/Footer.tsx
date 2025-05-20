@@ -24,7 +24,7 @@ function Footer() {
                 <div className="Logo w-[50%] flex items-center justify-center">
                     <img src="" alt=""  className="w-full lg:w-[15rem]"/>
                 </div>
-                <div className="CenterText lg:text-5xl" >
+                <div className="CenterText lg:text-5xl text-3xl sm:text-3xl md:text-4xl" >
                     <p className="text-white fontbold text-center poetsen-one-regular" ref={textRef}>
                         FROM CONCEPT TO CREATION <br />
                         LET's MAKE IT HAPPEN!

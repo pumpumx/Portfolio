@@ -3,6 +3,7 @@
 import { useEffect, useRef } from 'react'
 import { useGLTF, useAnimations } from '@react-three/drei'
 import { getAction } from '../../constants/constants'
+import { memo } from 'react'
 const  SpaceJet = (props) => {
   const group = useRef(null)
   const { nodes, materials, animations } = useGLTF('/24_dizzying_space_travel_-_inktober2019.glb')
@@ -1336,4 +1337,4 @@ const  SpaceJet = (props) => {
 
 useGLTF.preload('/24_dizzying_space_travel_-_inktober2019.glb')
 
-export default SpaceJet
+export default memo(SpaceJet)
