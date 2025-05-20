@@ -4,7 +4,7 @@ import Nav from "./components/navBar/Nav";
 import Footer from "./components/footer/Footer";
 const Layout = () => {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col overflow-x-hidden">
       {/* Fixed Nav */}
       <header className="sticky bg-transparent  top-0 z-50">
         <Nav />

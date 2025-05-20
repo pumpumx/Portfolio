@@ -17,6 +17,7 @@ const startAnimation = (ref: RefObject<HTMLDivElement | null>) => {
             rotate: "random([-30,30])",
             autoAlpha:0,
             yoyo:false,
+            delay:0.5,
             duration:1,
             stagger:{
                 amount:0.1  ,
