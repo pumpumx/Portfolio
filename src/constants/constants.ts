@@ -9,12 +9,12 @@ export interface navType {
   let animateAction:AnimationAction | null = null;
 
   export const navData: navType[] = [
-    { id: 1, name: "Home", href: "/home", gradient: "hover:shadow-[0_0_80px_1px_#fa00ff]" },
-    { id: 2, name: "About", href: "/about", gradient: "hover:shadow-[0_0_80px_1px_yellow]" },
-    { id: 3, name: "Work", href: "/work", gradient: "hover:shadow-[0_0_80px_1px_red]" },
-    { id: 4, name: "Blog", href: "/blog", gradient: "hover:shadow-[0_0_80px_1px_#28ed1a]" },
-    { id: 5, name: "More", href: "/more", gradient: "hover:shadow-[0_0_80px_1px_violet]" },
-    { id: 6, name: "Book a Call", href: "/book", gradient: "hover:shadow-[0_0_80px_1px_#00f6ff]" }
+    { id: 1, name: "Home", href: "/home", gradient: "hover:shadow-[0_0_40px_0px_#B9B9B9]" },
+    { id: 2, name: "About", href: "/about", gradient: "hover:shadow-[0_0_40px_0px_#B9B9B9]" },
+    { id: 3, name: "Work", href: "/work", gradient: "hover:shadow-[0_0_40px_0px_#B9B9B9]" },
+    { id: 4, name: "Blog", href: "/blog", gradient: "hover:shadow-[0_0_40px_0px_#B9B9B9]" },
+    { id: 5, name: "More", href: "/more", gradient: "hover:shadow-[0_0_40px_0px_#B9B9B9]" },
+    { id: 6, name: "Book a Call", href: "/book", gradient: "hover:shadow-[0_0_40px_0px_#B9B9B9]" }
   ];
 
   export const FooterData: navType[] = [

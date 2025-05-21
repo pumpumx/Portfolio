@@ -3,8 +3,7 @@ import { useRouteError } from "react-router-dom";
 
 const RouteError:React.FC = ()=> {
   const error:unknown = useRouteError();
-  console.error(error);
-  
+ 
   return (
     <div className="w-full h-screen  text-white font-bold bg-black flex justify-center items-center">
         <div className="text-center flex flex-col w-[50%] h-[20%] justify-around ">

@@ -13,7 +13,8 @@ const onScrollText = (ref: RefObject<HTMLDivElement | null>) => {
         split.lines.forEach((lines,i)=>{
             gsap.fromTo(lines,{
                 xPercent: i%2===0 ?-100:100,
-                opacity:0
+                opacity:0,
+                yoyo:true,
             },{
                 xPercent:0,
                 opacity:1,

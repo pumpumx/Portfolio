@@ -3,7 +3,6 @@ import SpaceJet from "../../models/jetModel/BgJet.model"
 import { Canvas } from "@react-three/fiber"
 import { memo } from "react"
 function BgJet() {
-
     return (
         <>
             <div className="w-full h-[100vh]  fixed top-0 z-[-1] ">
@@ -11,7 +10,7 @@ function BgJet() {
                     <PerspectiveCamera makeDefault position={[85, 200, 40]} />
                         <SpaceJet 
                             scale={0.17}
-                            position={[10, 20, -20]}
+                            position={[10, 20, -10]}
                         />
              {/* Dont write ACTUAL jsx when present in a 3d environment  */}
                     <ambientLight intensity={1} />

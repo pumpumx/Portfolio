@@ -40,16 +40,16 @@ function Nav() {
 
   return (
     <div ref={mainNavRef} className="w-full h-24 absolute  p-3 bg-transparent flex items-center justify-around">
-      <div className="logo   w-[4rem] ">
+      <div className="logo  w-[4rem] ">
         <img src="src/assets/logo.png" className="w-[4rem]" alt="Hey this is logo" />
       </div>
       <div className=" sm:w-[70%] md:w-[50%] lg:w-[50%] xl:w-[30%] w-[70%] h-[65%] rounded-full sm:flex items-center justify-center p-0.5 
-        bg-gradient-to-r from-white via-blue-500 to-black/50 hidden 
-      bg-red-800 ">
-      <div className="main antialiased-border hidden sm:flex h-full w-full flex-wrap text-nowrap
-      rounded-full text-sm  items-center antialiased-border  antialiased justify-evenly text-gray-200 bg-gray-950">
+        bg-gradient-to-r  hidden 
+       ">
+      <div className="main antialiased-border hidden sm:flex h-full w-full flex-wrap text-nowrap border-[1px] border-white/20
+      rounded-full text-sm  items-center antialiased-border  antialiased justify-evenly text-gray-200 bg-neutral-850">
           {navData.map(({id,name,gradient,href})=>(
-            <div key={id} className={`cursor-pointer   w-[15%] ${gradient}
+            <div key={id} className={`cursor-pointer hover:scale-110 transition-all   w-[15%] ${gradient}
           bg-gradient-to-b hover:from-white/15 hover:to-white/20 hover:text-white
           h-[90%] flex justify-center rounded-full items-center`} onClick={()=>navHandler(href)}>
             {name}

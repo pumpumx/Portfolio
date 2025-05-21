@@ -19,7 +19,7 @@ function Footer() {
     },[])
 
     return (
-        <div className="w-full h-[100vh] bg-black z-10 overflow-x-hidden">
+        <div className="w-full h-[100vh] bg-black z-10 overflow-x-hidden shadow-[0px_0px_800px_50px_black] ">
             <div className="w-full flex flex-col justify-center items-center h-[70vh] bg-cover bg-[url(/FooterBg.jpg)]">
                 <div className="Logo w-[50%] flex items-center justify-center">
                     <img src="" alt=""  className="w-full lg:w-[15rem]"/>
@@ -46,7 +46,7 @@ function Footer() {
                 </div>
             </div>
 
-            <div className="w-full h-[30vh] flex ">
+            <div className="w-full h-[30vh] flex shadow-[20px_0px_800px_50px_black] ">
                 <div className="aboutDiv w-[50%] flex flex-col justify-center items-center">
                     <div className="logo  w-[4rem] ">
                         <img src="/src/assets/logo.png" className="w-[4rem]" alt="Hey this is logo" />

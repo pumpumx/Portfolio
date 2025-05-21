@@ -5,12 +5,13 @@ const LazyBgJet  = lazy(()=>import('./components/backgroundJet/BgJet.tsx'))
 function App() {
  
 return (
-      <div className="main relative w-full min-h-screen overflow-x-hidden">
+      <div id="main-container" className="main relative w-full min-h-screen overflow-x-hidden">
          <LazyBgJet />
       <div className="heroSection mx-auto mt-40 w-[50%] h-[calc(50vh)] ">
         <HeroSection/>
       </div>
     </div>
+
     
   )
 }
