@@ -5,7 +5,7 @@ interface workProp {
   imgLink: string,
   style: string
 }
-import { MouseParallax } from 'react-just-parallax'
+
 import gsap from "gsap"
 import { useEffect, useRef } from "react"
 import ScrollTrigger from "gsap/ScrollTrigger"
@@ -14,6 +14,7 @@ gsap.registerPlugin(ScrollTrigger)
 export const WorkBox = ({ title = "This is my name and this is the project which i want to give you all.", imgLink = "", style = " bg-gradient-to-b from-pink-900  to-pink-700" }: workProp) => {
 
   const boxRef = useRef<HTMLDivElement>(null)
+  
    
   useEffect(()=>{
 
@@ -24,7 +25,7 @@ export const WorkBox = ({ title = "This is my name and this is the project which
       scale:0.7
     },
     {
-      scale:1.08,
+      scale:1.01,
       ease:'power1.in',
       scrollTrigger:{
         trigger:boxRef.current,
@@ -43,10 +44,10 @@ export const WorkBox = ({ title = "This is my name and this is the project which
 
   return (
 
-      <div ref={boxRef} 
+   
+      <div ref={boxRef}
         className={`w-full antialiased h-full sm:h-full rounded-md relative p-10 border-5 lg:w-full lg:h-full  overflow-hidden  border-white/10 shadow-[0px_0px_20px_0px_#f7f7f7]
-      group ${style} flex flex-col justify-between items-center bg-clip-padding ${style}`} >
-
+      group ${style} flex flex-col justify-between items-center bg-clip-padding ${style}`}>
         <div className="w-[80%] sm:flex h-[100%] hidden top-0 absolute ">
           <span className="w-[80%]  bg-clip-text"><p className=" font-bold text-white/70  mt-4">{title}</p></span>
           <span className="w-[25%] flex justify-center items-center "><ArrowRight color="#ffffff" /></span>
@@ -60,8 +61,7 @@ export const WorkBox = ({ title = "This is my name and this is the project which
 
         </div>
       </div>
-
-
+      
   )
 }
 
